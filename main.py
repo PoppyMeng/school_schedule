@@ -1,4 +1,4 @@
-
+from school_schedule.student import Student, has_more_class
 
 #first instance
 quinn = Student(
@@ -12,12 +12,13 @@ quinn = Student(
                     "Chemistry", 
                     "Music Composition"
                 ]
+                "Grace Hopper"
             )
 
 quinn.add_class("Painting")
 quinn.get_num_classes()
 quinn.summary()
-
+print(vars(quinn))
 # second instance
 claire = Student(
                 "Claire", 
@@ -34,7 +35,8 @@ claire = Student(
 
 claire.get_num_classes()
 claire.summary()
-
+claire.has_a_specific_class("Art")
 # Extra:
 # - create a function that will return the student with more classes
+has_more_class(claire, quinn)
 # - create a test for that function
